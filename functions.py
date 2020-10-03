@@ -23,12 +23,13 @@ Return:
 
 # Write your function here
 def home_town (home):
+    """returns true if home town is St. Paul"""
     if home == "St. Paul":
         return True
     else:
         return False 
 
-
+#print (home_town ("St. Paul"))
 """PROMPT 2
 
 Write a function that takes in a first and last name and returns a full name.
