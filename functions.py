@@ -23,7 +23,6 @@ Return:
 
 # Write your function here
 def home_town (home):
-    home=input("What’s your home town?")
     if home == "St. Paul":
         return True
     else:
