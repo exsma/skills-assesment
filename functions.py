@@ -29,7 +29,7 @@ def home_town (home):
     else:
         return False 
 
-#print (home_town ("St. Paul"))
+#print(home_town ("St. Paul"))
 """PROMPT 2
 
 Write a function that takes in a first and last name and returns a full name.
@@ -46,7 +46,8 @@ Return:
 """
 
 # Write your function here
-
+def learning_names (first , last):
+    return f"{first} {last}"
 
 """PROMPT 3
 
@@ -69,7 +70,11 @@ Arguments:
     - Last name (str)
     - Hometown (str)
 """
-
+def welcoming_you (first,last,home):
+    if home == "St. Paul":
+        print (f" Hi {first} {last}, we're from the same place!")
+    else:
+       print (f" Hi {first} {last},  I'd like to visit {home}!") 
 # Write your function here
 
 
@@ -93,7 +98,12 @@ Arguments:
 Return:
     - True or False (bool)
 """
-
+def check_if_fruit (fruit):
+    berries = ["strawberry" , "rasberry" , "blackberry" , "currant"]
+    if fruit in berries:
+        return True
+    else:
+        return False
 # Write your function here
 
 
@@ -109,7 +119,13 @@ Arguments:
 Return:
     - Shipping cost (int)
 """
-
+def cost_shipping (item):
+    berries = ["strawberry" , "rasberry" , "blackberry" , "currant"]
+    if item in berries:
+        shipping_cost = 1
+    else:
+        shipping_cost= 5
+    return f"{shipping_cost}$"
 # Write your function here
 
 
@@ -140,6 +156,19 @@ Return:
 """
 
 # Write your function here
+def total_cost (price,state,tax=0.05):
+    if state == "CA":
+        final_cost= float(int(price) + int(price)*tax + int(price)* 0.03)
+    elif state == "PA":
+        final_cost= float(int(price) + int(price)*tax + 2)
+    elif state == "MA" and price <= 100:
+        final_cost= float(int(price) + int(price)*tax + 1)
+    elif state == "MA" and price > 100:
+        final_cost= float(int(price) + int(price)*tax + 3)
+    else: 
+        final_cost = float(int(price) + int(price)*tax)
+    return f"{final_cost}$"
+
 
 
 """PROMPT 7
@@ -161,7 +190,14 @@ Return:
 """
 
 # Write your function here
+def elongate_list (list, *more):
+    for x in more:
+        list.extend(more)
+        return list
 
+
+ #source for amount of arguments is
+ # https://beginnersbook.com/2019/06/python-function-arguments-default-keyword-and-arbitrary/#vararg
 
 """PROMPT 8
 
@@ -188,3 +224,9 @@ Return:
 """
 
 # Write your function here
+def times_three (name):
+    def multiply_name (name):
+        names = name*3
+        return names
+    a_tuple= (name, multiply_name(name))
+    return a_tuple

@@ -23,8 +23,8 @@ def print_indices(items):
         berry 1
         cherry 2
     """
-
-    print("Nothing at all")
+    for x in range(len(items)):
+        print(f"item #{x} is {items[x]}")
 
 
 def words_in_common(words1, words2):
@@ -59,8 +59,9 @@ def words_in_common(words1, words2):
         ... )
         []
     """
-
-    return ['the wrong thing']
+    words1 = set(words1)
+    words2 = set(words2)
+    return words1 & words2
 
 
 def every_other_item(items):
@@ -72,7 +73,7 @@ def every_other_item(items):
        ['a', True, 0]
     """
 
-    return ['the wrong thing']
+    return items[::2]
 
 
 def smallest_n_items(items, n):
@@ -95,5 +96,6 @@ def smallest_n_items(items, n):
         >>> smallest_n_items([1, 1, 1, 1, 1, 1], 2)
         [1, 1]
     """
-
-    return []
+    items.sort()
+    items_smallest = items[:n]
+    return items_smallest
