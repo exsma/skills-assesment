@@ -47,6 +47,7 @@ Return:
 
 # Write your function here
 def learning_names (first , last):
+    """takes in a first and last name and returns a full name"""
     return f"{first} {last}"
 
 """PROMPT 3
