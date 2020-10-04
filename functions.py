@@ -72,6 +72,7 @@ Arguments:
     - Hometown (str)
 """
 def welcoming_you (first,last,home):
+    """a function that prints a greeting."""
     if home == "St. Paul":
         print (f" Hi {first} {last}, we're from the same place!")
     else:
@@ -100,6 +101,7 @@ Return:
     - True or False (bool)
 """
 def check_if_fruit (fruit):
+    """function that returns True if a fruit is a berry"""
     berries = ["strawberry" , "rasberry" , "blackberry" , "currant"]
     if fruit in berries:
         return True
@@ -121,6 +123,7 @@ Return:
     - Shipping cost (int)
 """
 def cost_shipping (item):
+    """a function that returns the shipping cost of an item"""
     berries = ["strawberry" , "rasberry" , "blackberry" , "currant"]
     if item in berries:
         shipping_cost = 1
@@ -158,6 +161,7 @@ Return:
 
 # Write your function here
 def total_cost (price,state,tax=0.05):
+    """ function that returns the total cost of something"""
     if state == "CA":
         final_cost= float(int(price) + int(price)*tax + int(price)* 0.03)
     elif state == "PA":
@@ -192,6 +196,7 @@ Return:
 
 # Write your function here
 def elongate_list (list, *more):
+    """function that takes in a list and *any* number of additional arguments."""
     for x in more:
         list.extend(more)
         return list
@@ -226,6 +231,7 @@ Return:
 
 # Write your function here
 def times_three (name):
+    """ function that takes in a word and returns a tuple."""
     def multiply_name (name):
         names = name*3
         return names
